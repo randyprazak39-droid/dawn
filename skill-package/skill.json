@@ -17,7 +17,6 @@
       },
       "isAvailableWorldwide": false,
       "testingInstructions": "Say 'open Dawn of Night' then 'play my latest beat'. Music must be hosted on HTTPS with valid SSL.",
-      "category": "MUSIC_AND_AUDIO",
       "distributionCountries": ["US"]
     },
     "apis": {
