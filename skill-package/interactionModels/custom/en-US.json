@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "dawn of night",
+      "invocationName": "night beats",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -105,14 +105,7 @@
           "slots": [
             {
               "name": "TrackTitle",
-              "type": "AMAZON.MusicRecording",
-              "samples": [
-                "{TrackTitle}",
-                "play {TrackTitle}",
-                "play the song {TrackTitle}",
-                "play track {TrackTitle}",
-                "I want to hear {TrackTitle}"
-              ]
+              "type": "AMAZON.MusicRecording"
             }
           ],
           "samples": [
@@ -131,12 +124,7 @@
           "slots": [
             {
               "name": "PlaylistName",
-              "type": "AMAZON.MusicPlaylist",
-              "samples": [
-                "{PlaylistName}",
-                "play my {PlaylistName} playlist",
-                "play playlist {PlaylistName}"
-              ]
+              "type": "AMAZON.MusicPlaylist"
             }
           ],
           "samples": [
