@@ -1,0 +1,198 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "dawn of night",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ShuffleOnIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ShuffleOffIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.LoopOnIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.LoopOffIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "PlayLatestIntent",
+          "slots": [],
+          "samples": [
+            "play my latest beat",
+            "play my latest song",
+            "play the newest track",
+            "play my latest track",
+            "play latest",
+            "play my new music",
+            "play what I just dropped",
+            "play my newest beat"
+          ]
+        },
+        {
+          "name": "PlayLatestBeatIntent",
+          "slots": [],
+          "samples": [
+            "play latest beat",
+            "play my beat",
+            "drop my latest beat",
+            "spin my latest beat",
+            "play my latest",
+            "play the latest beat",
+            "play my newest beat"
+          ]
+        },
+        {
+          "name": "PlayRandomIntent",
+          "slots": [],
+          "samples": [
+            "play a random track",
+            "play something random",
+            "surprise me",
+            "play a random song",
+            "shuffle my music",
+            "play random",
+            "pick a random track",
+            "play any song"
+          ]
+        },
+        {
+          "name": "PlayTrackIntent",
+          "slots": [
+            {
+              "name": "TrackTitle",
+              "type": "AMAZON.MusicRecording",
+              "samples": [
+                "{TrackTitle}",
+                "play {TrackTitle}",
+                "play the song {TrackTitle}",
+                "play track {TrackTitle}",
+                "I want to hear {TrackTitle}"
+              ]
+            }
+          ],
+          "samples": [
+            "play {TrackTitle}",
+            "play the song {TrackTitle}",
+            "play track {TrackTitle}",
+            "I want to hear {TrackTitle}",
+            "spin {TrackTitle}",
+            "drop {TrackTitle}",
+            "play my song {TrackTitle}",
+            "put on {TrackTitle}"
+          ]
+        },
+        {
+          "name": "PlayPlaylistIntent",
+          "slots": [
+            {
+              "name": "PlaylistName",
+              "type": "AMAZON.MusicPlaylist",
+              "samples": [
+                "{PlaylistName}",
+                "play my {PlaylistName} playlist",
+                "play playlist {PlaylistName}"
+              ]
+            }
+          ],
+          "samples": [
+            "play my {PlaylistName} playlist",
+            "play playlist {PlaylistName}",
+            "play the {PlaylistName} playlist",
+            "put on {PlaylistName}",
+            "start {PlaylistName}"
+          ]
+        },
+        {
+          "name": "WhatsPlayingIntent",
+          "slots": [],
+          "samples": [
+            "what is playing",
+            "what song is this",
+            "what am I listening to",
+            "what track is this",
+            "who is this",
+            "what is this song",
+            "tell me what is playing"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "PlayTrackIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "TrackTitle",
+              "type": "AMAZON.MusicRecording",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.TrackTitle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.TrackTitle",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What track would you like me to play?"
+          }
+        ]
+      }
+    ]
+  }
+}

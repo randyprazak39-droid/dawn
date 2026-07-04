@@ -1,0 +1,38 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Stream music from Dawn of Night directly on your Alexa device.",
+          "examplePhrases": [
+            "Alexa, open Dawn of Night",
+            "Alexa, ask Dawn of Night to play my latest beat",
+            "Alexa, ask Dawn of Night to play a random track"
+          ],
+          "name": "Dawn of Night",
+          "description": "Play beats, songs, and playlists from Dawn of Night. Supports play, pause, resume, next, previous, and track search by name.",
+          "smallIconUri": "https://www.dawnofnight.com/img/alexa-icon-108.png",
+          "largeIconUri": "https://www.dawnofnight.com/img/alexa-icon-512.png"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Say 'open Dawn of Night' then 'play my latest beat'. Music must be hosted on HTTPS with valid SSL.",
+      "category": "MUSIC_AND_AUDIO",
+      "distributionCountries": ["US"]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:YOUR_ACCOUNT_ID:function:dawn-of-night-skill"
+        },
+        "interfaces": [
+          {
+            "type": "AUDIO_PLAYER"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": []
+  }
+}

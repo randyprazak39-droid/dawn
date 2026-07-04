@@ -1,0 +1,9 @@
+{
+  "name": "dawn-of-night-alexa-skill",
+  "version": "1.0.0",
+  "description": "Dawn of Night Alexa Skill - Streams music from dawnofnight.com",
+  "main": "index.js",
+  "author": "Dawn of Night",
+  "license": "MIT",
+  "dependencies": {}
+}
